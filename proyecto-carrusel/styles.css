@@ -1,0 +1,163 @@
+/* --- Paso 2: Estilos CSS Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- CONTENEDOR PRINCIPAL DEL CARRUSEL --- */
+.carousel-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* Estilo para el contador de imágenes (Ejercicio 1) */
+.image-counter {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* --- ESTRUCTURA DEL CARRUSEL E IMÁGENES --- */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+}
+
+.carousel-image {
+    width: 100%;
+    flex-shrink: 0;
+    display: none; /* Las imágenes están ocultas por defecto */
+}
+
+/* La clase 'active' es la que hace que una imagen sea visible */
+.carousel-image.active {
+    display: block;
+}
+
+/* --- BOTONES DE NAVEGACIÓN (FLECHAS) --- */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* --- INDICADORES DE PUNTOS --- */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.indicator.active {
+    background: #667eea;
+}
+
+/* --- CONTROLES INFERIORES (PLAY/PAUSE, TIMER, ETC.) --- */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.control-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.control-button:hover {
+    background: #764ba2;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #667eea;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* --- SELECTOR DE VELOCIDAD (Ejercicio 5) --- */
+.speed-selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    font-size: 16px;
+    color: #333;
+}
+
+#speedSelect {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 40px;
+}

@@ -1,0 +1,49 @@
+<!--Alejandra Rodriguez de la Cruz-->
+<!--No.Control:22760049-->
+<!--Paso 1: Estructura HTML Base-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <h1>Mi Galería de Imágenes</h1>
+        <!--Paso 3: Agregar Botones de Navegación-->
+        <div class="carousel">
+             <!--Ejercicio 6: contenedor vacío-->
+            <div class="carousel-images"></div>
+           
+            <button class="carousel-button prev">❮</button>
+            <button class="carousel-button next">❯</button>
+        </div>
+        <!--Paso 8: Agregar Indicadores (Puntos)-->
+        <div class="carousel-indicators"></div>
+         <!--Ejercicio 1: Contador de Imágenes -->   
+        <p id="imageCounter" class="image-counter"></p>
+
+        <div class="carousel-controls">
+            <button id="playPauseBtn" class="control-button">▶️ Iniciar</button>
+            <!--Ejercicio 2: Botón de Reinicio (Intermedio)-->
+            <button id="resetBtn" class="control-button">🔄 Reiniciar</button>
+            <!--Ejercicio 3: Modo Aleatorio (Intermedio-Avanzado)-->
+            <button id="randomBtn" class="control-button">🔀 Aleatorio</button>
+            <span id="timer" class="timer">0s</span>
+        </div>
+            <!--Ejercicio 5: Selector de Velocidad (Avanzado)-->
+        <div class="speed-selector">
+            <label for="speed">Velocidad:</label>
+            <select name="speed" id="speedSelect">
+                <option value="5000">Lento (5s)</option>
+                <option value="3000" selected>Normal (3s)</option>
+                <option value="1000">Rápido (1s)</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
