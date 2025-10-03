@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contador {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contador p {
+    color: #1976d2;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formulario {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#input-tarea {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#input-tarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#btn-agregar {
+    padding: 12px 24px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btn-agregar:hover {
+    background: #5568d3;
+}
+
+#lista-tareas {
+    list-style: none;
+}
+
+.tarea-item {
+    background: #f5f5f5;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+    cursor: grab; /* NUEVO: Cambia el cursor a una mano para indicar que se puede arrastrar */
+}
+
+/* NUEVO: Estilo para la tarea que se está arrastrando */
+.tarea-item.dragging {
+    opacity: 0.5;
+    background: #cce5ff; /* Un color azul claro para destacarla */
+}
+
+.tarea-item:hover {
+    transform: translateX(5px);
+}
+
+.btn-eliminar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-eliminar:hover {
+    background: #c0392b;
+}
+
+
+
+
+
+/* --- ESTILOS NUEVOS checkbox --- */
+.tarea-item.completada {
+    background: #e0e0e0; /* Cambia el color de fondo a gris */
+}
+
+.tarea-item.completada span {
+    text-decoration: line-through; /* Tacha el texto */
+    color: #999; /* Cambia el color del texto a un gris más claro */
+}
+
+.tarea-item span {
+    flex-grow: 1; /* Hace que el texto ocupe el espacio disponible */
+}
+
+.tarea-item input[type="checkbox"] {
+    margin-right: 10px; /* Añade un espacio entre el checkbox y el texto */
+}
+/* --- FIN ESTILOS checkbox --- */
+
+/* --- ESTILOS NUEVOS PARA BOTON DE EDITAR --- */
+.btn-editar {
+    background: #f39c12; /* Color naranja */
+    color: white;
+    border: none;
+    margin-left: 5px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: auto; /* IMPORTANTE: empuja los botones a la derecha */
+}
+
+.btn-editar:hover {
+    background: #e67e22;
+}
+/* --- FIN ESTILOS BOTON DE EDITAR --- */
+
+
+/* --- ESTILOS NUEVOS PARA FILTROS --- */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.filtro-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Estilo para el botón que está activo */
+.filtro-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+/* --- FIN ESTILOS NUEVOS --- */
